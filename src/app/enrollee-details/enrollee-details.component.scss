@@ -1,0 +1,42 @@
+.mat-elevation-z4 {
+    padding: 2em 2em;
+}
+h1 {
+    margin-top: 2em;
+    color: #00548C;
+}
+.input {
+    margin-top: 1em;
+}
+mat-label {
+    font-size: 1.2em;
+}
+mat-radio-button {
+    margin-right: 1.2em;  
+}
+
+::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle  {
+    border-color: #00548C !important;
+}
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: #00548C;
+}
+::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    background-color: #00548C !important;
+}
+
+button {
+    margin-top: 2em;
+    background-color: #00548C;
+}
+.cancelBtn {
+    float: right;
+}
+.btn-primary:hover, .btn-primary:focus  {
+    border: none;
+    background-color: #00548C;
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: red !important;
+}

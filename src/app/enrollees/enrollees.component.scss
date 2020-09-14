@@ -1,0 +1,26 @@
+.header {
+    margin-top: 3em;
+}
+h1 {
+    color: #00548C;
+    padding-top: 0.5em;
+    padding-left: 0px;
+}
+th {
+    font-size: 1.3em;
+    color: #00548C;
+}
+th.mat-sort-header-sorted {
+    color: black;
+}
+.activeSatus {
+    color: #09c509;
+}
+.inactiveSatus {
+    color: #ec093c
+}
+mat-icon {
+    cursor: pointer;
+}
+
+
