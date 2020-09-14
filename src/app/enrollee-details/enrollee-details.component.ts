@@ -51,7 +51,6 @@ export class EnrolleeDetailsComponent implements OnInit {
         'dateOfBirth': this.enrollee['dateOfBirth']?(this.getDateFormat(this.enrollee['dateOfBirth'])):'',
         'active': this.enrollee['active']
       });
-      console.log(enrollee)
     });
   }
 
@@ -59,8 +58,6 @@ export class EnrolleeDetailsComponent implements OnInit {
 
 
   getDateFormat(date) {
-    // (new Date(this.enrollee['dateOfBirth'])).toISOString()
-    // return date.split('-').reverse().join('/');
     let items = date?.split('-');
     let formattedDate = this.getMonth(items[1]) + ' ' + items[2] + ' ' + items[0];
     return formattedDate;
@@ -137,8 +134,6 @@ export class EnrolleeDetailsComponent implements OnInit {
   onSubmit() {
     if (this.enrolleeForm.valid) {
       this.enrolleeModel = this.enrolleeForm.value;
-      // this.enrolleeModel.dateOfBirth = this.enrolleeForm.value.dateOfBirth.toISOString();
-      // this.enrolleeModel.dateOfBirth = this.enrolleeForm.value.dateOfBirth?(this.getDate(this.enrolleeForm.value.dateOfBirth)):'';
       if (this.params.id) {
         this.mapValuesToEnrollee();
         this._enrolleeService.updateEnrollee(this.enrollee, this.params.id).subscribe((data) => {
@@ -154,8 +149,6 @@ export class EnrolleeDetailsComponent implements OnInit {
 
   mapValuesToEnrollee() {
     this.enrollee.name = this.enrolleeForm.value.name;
-    // this.enrollee.id = this.enrolleeForm.value.id;
-    // this.enrollee.dateOfBirth = this.enrolleeForm.value.dateOfBirth;
     this.enrollee.active = this.enrolleeForm.value.active;
   }
 

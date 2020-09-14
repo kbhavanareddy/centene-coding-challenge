@@ -15,21 +15,21 @@ export class EnrolleesService {
   //Get Enrollees
   getEnrollees() {
     return this._http
-      .get('http://localhost:8080/enrollees')
+      .get(this.api+'/enrollees')
       .pipe(catchError(this.handleError));
   }
 
   //Get Enrollee
   getEnrollee(id) {
     return this._http
-      .get('http://localhost:8080/enrollees/'+id)
+      .get(this.api+'/enrollees/'+id)
       .pipe(catchError(this.handleError));
   }
 
   //Update Enrollee
   updateEnrollee(form, id) {
     return this._http
-      .put('http://localhost:8080/enrollees/'+id, form)
+      .put(this.api+'/enrollees/'+id, form)
       .pipe(catchError(this.handleError));
   }
 

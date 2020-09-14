@@ -30,7 +30,6 @@ export class EnrolleesComponent implements OnInit {
   getEnrollees() {
     this._enrolleesService.getEnrollees().subscribe((enrollees) => {
       let totalEnrollees = enrollees;
-      console.log(enrollees)
       this.listOfEnrollees = new MatTableDataSource(totalEnrollees);
       this.listOfEnrollees.paginator = this.paginator;
       this.listOfEnrollees.sort = this.sort;
@@ -42,10 +41,6 @@ export class EnrolleesComponent implements OnInit {
   }
 
   filter() {
-    console.log()
-    // if (this.searchKey.trim().toLowerCase() === 'activated') {
-    //   this.searchKey = 'true';
-    // }
     this.listOfEnrollees.filter = this.searchKey.trim().toLowerCase();
   }
   onSearchClear() {
